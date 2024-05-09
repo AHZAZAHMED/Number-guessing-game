@@ -1,14 +1,13 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 let randomNumber = Math.floor(Math.random() * 10);
-console.log(`you have three chance. 
-please guess the number between 1-10`);
-for (let i = 0; i <= 3; i++) {
+console.log(`you have three chance. `);
+for (let i = 0; i < 3; i++) {
     const answer = await inquirer.prompt([
         {
-            name: "number",
+            message: "please guess the number between 1-10 :",
             type: "number",
-            message: "",
+            name: "number",
         },
     ]);
     if (answer.number === randomNumber) {

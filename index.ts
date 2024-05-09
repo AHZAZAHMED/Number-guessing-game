@@ -6,9 +6,9 @@ console.log(`you have three chance. `);
 for (let i = 0; i < 3; i++) {
   const answer = await inquirer.prompt([
     {
-      name: "number",
+      message: "please guess the number between 1-10 :",
       type: "number",
-      message: "please guess the number between 1-10",
+      name: "number",
     },
   ]);
 
